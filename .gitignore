@@ -46,3 +46,5 @@ composer.phar
 atlassian-ide-plugin.xml
 /node_modules/
 /.vscode/
+/.github/workflows/config-template.php
+/.github/workflows/push.yml
