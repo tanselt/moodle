@@ -2,11 +2,12 @@
 name: Merge upstream
 
 # Schedule
-on:
-  schedule:
-      - cron: '11 11 * * 0'
-  push:
-    branches: [ moodle/master ]
+on: [push]
+# on:
+#   schedule:
+#       - cron: '11 11 * * 0'
+#   push:
+#     branches: [ moodle/master ]
 
 jobs:
   merge-branch:
@@ -21,6 +22,6 @@ jobs:
           git checkout moodle/master
           git config user.name "Tansel T"
           git config user.email "tanselt@gmail.com"
-          git pull https://github.com/moodle/moodle.git MOODLE_38_STABLE --no-edit
+          git pull https://github.com/moodle/moodle.git MOODLE_39_STABLE --no-edit
           git push origin moodle/master
 
